@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Portfolio</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Trang chủ</a></li>
+                <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+                <li><a href="#experience" class="nav-link">Kinh nghiệm</a></li>
+                <li><a href="#skills" class="nav-link">Kỹ năng</a></li>
+                <li><a href="#bucket-list" class="nav-link">100 Điều muốn làm</a></li>
+                <li><a href="#travel" class="nav-link">Du lịch</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="images/avatar.jpg" alt="Avatar" onerror="this.src='https://via.placeholder.com/300x300?text=Your+Photo'">
+            </div>
+            <h1 class="hero-title">Xin chào, tôi là</h1>
+            <h2 class="hero-name">[Tên của bạn]</h2>
+            <p class="hero-subtitle">[Nghề nghiệp của bạn]</p>
+            <div class="hero-social">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+            <a href="#about" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Giới thiệu</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">Xin chào! Tôi là một người đam mê công nghệ và luôn khao khát học hỏi những điều mới.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <span class="info-label">Tên</span>
+                                <span class="info-value">[Tên của bạn]</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-birthday-cake"></i>
+                            <div>
+                                <span class="info-label">Tuổi</span>
+                                <span class="info-value">[Tuổi của bạn]</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <span class="info-label">Nghề nghiệp</span>
+                                <span class="info-value">[Nghề nghiệp]</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="info-label">Địa điểm</span>
+                                <span class="info-value">[Thành phố, Việt Nam]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span class="stat-label">Năm kinh nghiệm</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="20">0</span>
+                        <span class="stat-label">Dự án hoàn thành</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="15">0</span>
+                        <span class="stat-label">Địa điểm đã đến</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Kinh nghiệm & Thành tích</h2>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="work">Công việc</button>
+                <button class="tab-btn" data-tab="education">Học vấn</button>
+                <button class="tab-btn" data-tab="achievements">Thành tích</button>
+            </div>
+
+            <div class="tab-content">
+                <!-- Work Tab -->
+                <div id="work" class="tab-pane active">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2022 - Hiện tại</span>
+                                <h3>[Vị trí công việc]</h3>
+                                <h4>[Tên công ty]</h4>
+                                <p>Mô tả công việc và trách nhiệm của bạn tại đây...</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2020 - 2022</span>
+                                <h3>[Vị trí công việc trước]</h3>
+                                <h4>[Tên công ty trước]</h4>
+                                <p>Mô tả công việc và trách nhiệm của bạn tại đây...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Tab -->
+                <div id="education" class="tab-pane">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2016 - 2020</span>
+                                <h3>[Ngành học]</h3>
+                                <h4>[Tên trường đại học]</h4>
+                                <p>Mô tả về quá trình học tập, các môn học chính, GPA...</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2013 - 2016</span>
+                                <h3>Trung học phổ thông</h3>
+                                <h4>[Tên trường]</h4>
+                                <p>Mô tả về quá trình học tập...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements Tab -->
+                <div id="achievements" class="tab-pane">
+                    <div class="achievements-grid">
+                        <div class="achievement-card">
+                            <div class="achievement-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h3>[Tên thành tích]</h3>
+                            <p>[Mô tả ngắn về thành tích]</p>
+                            <span class="achievement-year">2023</span>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h3>[Chứng chỉ]</h3>
+                            <p>[Mô tả về chứng chỉ]</p>
+                            <span class="achievement-year">2022</span>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <h3>[Giải thưởng]</h3>
+                            <p>[Mô tả về giải thưởng]</p>
+                            <span class="achievement-year">2021</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Kỹ năng lập trình</h2>
+
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3><i class="fas fa-code"></i> Ngôn ngữ lập trình</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-php"></i>
+                            </div>
+                            <span class="skill-name">PHP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3><i class="fas fa-layer-group"></i> Framework & Libraries</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Laravel</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">TailwindCSS</span>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3><i class="fas fa-database"></i> Database & Tools</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bucket List Section -->
+    <section id="bucket-list" class="bucket-list">
+        <div class="container">
+            <h2 class="section-title">100 Điều muốn làm</h2>
+            <p class="section-subtitle">Danh sách những điều tôi muốn hoàn thành trong cuộc đời</p>
+
+            <div class="bucket-filters">
+                <button class="filter-btn active" data-filter="all">Tất cả</button>
+                <button class="filter-btn" data-filter="completed">Đã hoàn thành</button>
+                <button class="filter-btn" data-filter="pending">Chưa hoàn thành</button>
+                <button class="filter-btn" data-filter="travel">Du lịch</button>
+                <button class="filter-btn" data-filter="career">Sự nghiệp</button>
+                <button class="filter-btn" data-filter="personal">Cá nhân</button>
+            </div>
+
+            <div class="bucket-progress">
+                <div class="progress-info">
+                    <span>Tiến độ: <strong id="completed-count">15</strong>/100</span>
+                    <span id="progress-percent">15%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="bucket-progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="bucket-grid" id="bucket-grid">
+                <!-- Items will be rendered by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Section -->
+    <section id="travel" class="travel">
+        <div class="container">
+            <h2 class="section-title">Những nơi đã đến</h2>
+            <p class="section-subtitle">Hành trình khám phá Việt Nam và thế giới</p>
+
+            <div class="travel-tabs">
+                <button class="travel-tab active" data-region="vietnam">
+                    <i class="fas fa-flag"></i> Việt Nam
+                </button>
+                <button class="travel-tab" data-region="world">
+                    <i class="fas fa-globe"></i> Thế giới
+                </button>
+            </div>
+
+            <div class="travel-content">
+                <!-- Vietnam Places -->
+                <div id="vietnam" class="travel-region active">
+                    <div class="places-grid">
+                        <div class="place-card" data-place="hanoi">
+                            <div class="place-image">
+                                <img src="images/travel/hanoi.jpg" alt="Hà Nội" onerror="this.src='https://via.placeholder.com/400x300?text=Ha+Noi'">
+                                <div class="place-overlay">
+                                    <span class="view-photos"><i class="fas fa-images"></i> Xem ảnh</span>
+                                </div>
+                            </div>
+                            <div class="place-info">
+                                <h3>Hà Nội</h3>
+                                <p><i class="fas fa-calendar"></i> Tháng 3, 2023</p>
+                            </div>
+                        </div>
+                        <div class="place-card" data-place="hoian">
+                            <div class="place-image">
+                                <img src="images/travel/hoian.jpg" alt="Hội An" onerror="this.src='https://via.placeholder.com/400x300?text=Hoi+An'">
+                                <div class="place-overlay">
+                                    <span class="view-photos"><i class="fas fa-images"></i> Xem ảnh</span>
+                                </div>
+                            </div>
+                            <div class="place-info">
+                                <h3>Hội An</h3>
+                                <p><i class="fas fa-calendar"></i> Tháng 6, 2023</p>
+                            </div>
+                        </div>
+                        <div class="place-card" data-place="dalat">
+                            <div class="place-image">
+                                <img src="images/travel/dalat.jpg" alt="Đà Lạt" onerror="this.src='https://via.placeholder.com/400x300?text=Da+Lat'">
+                                <div class="place-overlay">
+                                    <span class="view-photos"><i class="fas fa-images"></i> Xem ảnh</span>
+                                </div>
+                            </div>
+                            <div class="place-info">
+                                <h3>Đà Lạt</h3>
+                                <p><i class="fas fa-calendar"></i> Tháng 12, 2022</p>
+                            </div>
+                        </div>
+                        <div class="place-card" data-place="phuquoc">
+                            <div class="place-image">
+                                <img src="images/travel/phuquoc.jpg" alt="Phú Quốc" onerror="this.src='https://via.placeholder.com/400x300?text=Phu+Quoc'">
+                                <div class="place-overlay">
+                                    <span class="view-photos"><i class="fas fa-images"></i> Xem ảnh</span>
+                                </div>
+                            </div>
+                            <div class="place-info">
+                                <h3>Phú Quốc</h3>
+                                <p><i class="fas fa-calendar"></i> Tháng 8, 2022</p>
+                            </div>
+                        </div>
+                        <div class="place-card" data-place="sapa">
+                            <div class="place-image">
+                                <img src="images/travel/sapa.jpg" alt="Sapa" onerror="this.src='https://via.placeholder.com/400x300?text=Sapa'">
+                                <div class="place-overlay">
+                                    <span class="view-photos"><i class="fas fa-images"></i> Xem ảnh</span>
+                                </div>
+                            </div>
+                            <div class="place-info">
+                                <h3>Sapa</h3>
+                                <p><i class="fas fa-calendar"></i> Tháng 1, 2023</p>
+                            </div>
+                        </div>
+                        <div class="place-card" data-place="halong">
+                            <div class="place-image">
+                                <img src="images/travel/halong.jpg" alt="Hạ Long" onerror="this.src='https://via.placeholder.com/400x300?text=Ha+Long'">
+                                <div class="place-overlay">
+                                    <span class="view-photos"><i class="fas fa-images"></i> Xem ảnh</span>
+                                </div>
+                            </div>
+                            <div class="place-info">
+                                <h3>Vịnh Hạ Long</h3>
+                                <p><i class="fas fa-calendar"></i> Tháng 4, 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- World Places -->
+                <div id="world" class="travel-region">
+                    <div class="places-grid">
+                        <div class="place-card" data-place="tokyo">
+                            <div class="place-image">
+                                <img src="images/travel/tokyo.jpg" alt="Tokyo" onerror="this.src='https://via.placeholder.com/400x300?text=Tokyo'">
+                                <div class="place-overlay">
+                                    <span class="view-photos"><i class="fas fa-images"></i> Xem ảnh</span>
+                                </div>
+                            </div>
+                            <div class="place-info">
+                                <h3>Tokyo, Nhật Bản</h3>
+                                <p><i class="fas fa-calendar"></i> Tháng 4, 2023</p>
+                            </div>
+                        </div>
+                        <div class="place-card" data-place="seoul">
+                            <div class="place-image">
+                                <img src="images/travel/seoul.jpg" alt="Seoul" onerror="this.src='https://via.placeholder.com/400x300?text=Seoul'">
+                                <div class="place-overlay">
+                                    <span class="view-photos"><i class="fas fa-images"></i> Xem ảnh</span>
+                                </div>
+                            </div>
+                            <div class="place-info">
+                                <h3>Seoul, Hàn Quốc</h3>
+                                <p><i class="fas fa-calendar"></i> Tháng 10, 2022</p>
+                            </div>
+                        </div>
+                        <div class="place-card" data-place="singapore">
+                            <div class="place-image">
+                                <img src="images/travel/singapore.jpg" alt="Singapore" onerror="this.src='https://via.placeholder.com/400x300?text=Singapore'">
+                                <div class="place-overlay">
+                                    <span class="view-photos"><i class="fas fa-images"></i> Xem ảnh</span>
+                                </div>
+                            </div>
+                            <div class="place-info">
+                                <h3>Singapore</h3>
+                                <p><i class="fas fa-calendar"></i> Tháng 7, 2023</p>
+                            </div>
+                        </div>
+                        <div class="place-card" data-place="bangkok">
+                            <div class="place-image">
+                                <img src="images/travel/bangkok.jpg" alt="Bangkok" onerror="this.src='https://via.placeholder.com/400x300?text=Bangkok'">
+                                <div class="place-overlay">
+                                    <span class="view-photos"><i class="fas fa-images"></i> Xem ảnh</span>
+                                </div>
+                            </div>
+                            <div class="place-info">
+                                <h3>Bangkok, Thái Lan</h3>
+                                <p><i class="fas fa-calendar"></i> Tháng 5, 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Modal -->
+    <div id="photo-modal" class="photo-modal">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <h3 id="modal-title"></h3>
+            <div class="modal-gallery" id="modal-gallery">
+                <!-- Photos will be loaded here -->
+            </div>
+            <div class="modal-nav">
+                <button class="nav-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close"><i class="fas fa-times"></i></button>
+        <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+        <img id="lightbox-image" src="" alt="">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Liên hệ với tôi</h3>
+                    <p><i class="fas fa-envelope"></i> email@example.com</p>
+                    <p><i class="fas fa-phone"></i> +84 xxx xxx xxx</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 My Profile. Made with <i class="fas fa-heart"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
