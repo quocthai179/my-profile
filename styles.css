@@ -995,6 +995,156 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ================================
+   Projects Section
+================================ */
+.projects {
+    padding: 100px 0;
+    position: relative;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-aurora);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-glow);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.project-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-aurora);
+    border-radius: 15px;
+    color: var(--star-white);
+    font-size: 1.5rem;
+    box-shadow: var(--shadow-glow-sm);
+}
+
+.project-badge {
+    padding: 0.35rem 0.75rem;
+    background: rgba(168, 85, 247, 0.2);
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: var(--nebula-purple);
+    font-weight: 500;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    background: var(--gradient-aurora);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.project-subtitle {
+    color: var(--text-light);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-role {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: rgba(168, 85, 247, 0.1);
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.project-role i {
+    color: var(--nebula-purple);
+}
+
+.project-description {
+    margin-bottom: 1.5rem;
+}
+
+.project-description ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-description li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.project-description li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--nebula-purple);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    padding: 0.35rem 0.75rem;
+    background: var(--glass-bg);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.tech-tag:hover {
+    background: var(--primary-color);
+    color: var(--star-white);
+    border-color: transparent;
+}
+
+/* ================================
    Bucket List Section
 ================================ */
 .bucket-list {
