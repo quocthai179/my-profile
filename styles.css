@@ -1642,3 +1642,7 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color);
 }
+
+/* Cosmos canvas replaces the CSS planets */
+.space-bg .planets { display: none; }
+@media (max-width: 768px) { .cosmos-hud { font-size: 10px !important; left: 12px !important; } }
