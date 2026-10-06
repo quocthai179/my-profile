@@ -1642,3 +1642,156 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color);
 }
+
+/* ================================
+   Cosmos: ray-traced black hole (cosmos.js)
+================================ */
+.space-bg .planets { display: none; }
+
+/* the WebGL sky replaces the CSS stars & nebulae (they would not be lensed) */
+.space-bg.cosmos-gl > .stars,
+.space-bg.cosmos-gl > .nebula,
+.space-bg.cosmos-gl .dynamic-stars { display: none; }
+
+.cosmos-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1.8s ease;
+}
+.cosmos-canvas.is-ready { opacity: 1; }
+
+.cosmos-hud {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 60;
+    max-width: 330px;
+    padding: 9px 14px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: rgba(225, 215, 255, 0.72);
+    background: rgba(12, 10, 28, 0.72);
+    border: 1px solid rgba(168, 85, 247, 0.22);
+    border-radius: 12px;
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+    opacity: 0.85;
+    transition: opacity 0.4s ease, border-color 0.4s ease;
+}
+
+.cosmos-hud__bar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.cosmos-hud:hover,
+.cosmos-hud.is-open { opacity: 1; border-color: rgba(168, 85, 247, 0.45); }
+
+.cosmos-hud__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font: inherit;
+    flex-shrink: 0;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(192, 132, 252, 0.95);
+}
+.cosmos-hud__title::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ff8a3d;
+    box-shadow: 0 0 10px #ff8a3d;
+    animation: cosmosPulse 2.4s ease-in-out infinite;
+}
+
+/* telemetry folds open on hover / click */
+.cosmos-hud__more {
+    display: grid;
+    grid-template-rows: 0fr;
+    max-width: 0;
+    transition: grid-template-rows 0.45s ease, max-width 0.45s ease;
+}
+.cosmos-hud__more > div { overflow: hidden; }
+.cosmos-hud:hover .cosmos-hud__more,
+.cosmos-hud.is-open .cosmos-hud__more { grid-template-rows: 1fr; max-width: 400px; }
+
+.cosmos-telemetry {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 3px 14px;
+    min-width: 270px;
+    margin-top: 10px;
+    padding: 10px 0 8px;
+    border-top: 1px solid rgba(168, 85, 247, 0.2);
+}
+.cosmos-telemetry span { opacity: 0.55; }
+.cosmos-telemetry b {
+    font-weight: 500;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.92);
+    font-variant-numeric: tabular-nums;
+}
+
+.cosmos-eq {
+    white-space: nowrap;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.92);
+    text-shadow: 0 0 14px rgba(168, 85, 247, 0.6);
+    transition: opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease;
+}
+.cosmos-eq.is-out {
+    opacity: 0;
+    transform: translateY(6px);
+    filter: blur(4px);
+}
+.cosmos-eq small {
+    display: none;
+    margin-bottom: 3px;
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    font-style: normal;
+    font-size: 9.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(110, 170, 255, 0.9);
+    text-shadow: none;
+}
+.cosmos-hud.is-mini:not(:hover):not(.is-open) .cosmos-eq { display: none; }
+.cosmos-hud:hover .cosmos-eq small,
+.cosmos-hud.is-open .cosmos-eq small { display: block; }
+.cosmos-hud sub,
+.cosmos-hud sup { font-size: 0.7em; }
+
+.cosmos-hint {
+    font-size: 10px;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+    opacity: 0.5;
+}
+
+@keyframes cosmosPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.35; transform: scale(0.7); }
+}
+
+@media (max-width: 900px) {
+    .cosmos-hud { display: none; }
+}
