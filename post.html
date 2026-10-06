@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thái's Blog - Kiến thức, kinh nghiệm, trải nghiệm</title>
+    <title>Bài viết - Thái's Blog</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="blog.css">
     <meta name="description" content="Blog cá nhân của Huỳnh Quốc Thái: chia sẻ kiến thức, kinh nghiệm và trải nghiệm.">
@@ -54,23 +54,9 @@
     </nav>
 
     <main class="blog-main">
-        <section class="blog-hero">
-            <div class="container">
-                <h1 class="blog-hero-title">Kiến thức · Kinh nghiệm · Trải nghiệm</h1>
-                <p class="blog-hero-sub">Xin chào, tôi là <a href="about.html">Huỳnh Quốc Thái</a> — Backend Engineer. Đây là nơi tôi ghi lại những gì mình học được và đã trải qua.</p>
-            </div>
-        </section>
-
-        <section class="blog-posts">
-            <div class="container">
-                <div class="blog-toolbar">
-                    <div class="blog-filters" id="post-filters"></div>
-                    <div class="blog-search"><i class="fas fa-search"></i><input id="post-search" type="search" placeholder="Tìm bài viết..." aria-label="Tìm bài viết"></div>
-                </div>
-                <div class="post-grid" id="post-list"></div>
-                <p class="post-empty" id="post-empty" hidden>Không có bài viết phù hợp.</p>
-            </div>
-        </section>
+        <div class="container article-container">
+            <article id="article"></article>
+        </div>
     </main>
 
     <!-- Footer -->
